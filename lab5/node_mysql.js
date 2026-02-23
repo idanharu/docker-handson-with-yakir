@@ -1,3 +1,4 @@
+
 const mysql = require('mysql2');
 const dotenv = require('dotenv')
 dotenv.config()
@@ -16,3 +17,15 @@ connection.connect((err) => {
   }
   console.log('Connected to the MySQL database!');
 });
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
