@@ -14,5 +14,7 @@ services:
     container_name: mysql_node
     ports:
       - "3000:3000"
+    environment:
+      - DB_HOST=db
 volumes:
   db_data:
